@@ -1,0 +1,1194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    cursor: default;
+}
+
+.special {
+    display: none;
+}
+
+.mob {
+    display: none;
+}
+
+body {
+    background: linear-gradient(90deg, #330839 0%, #581746 100%);
+}
+
+@font-face {
+    font-family: AvenirNext-light;
+    src: url(../fonts/AvenirNextLTPro-It.otf);
+}
+
+@font-face {
+    font-family: AvenirNext-Regular;
+    src: url(../fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: AvenirNext-Bold;
+    src: url(../fonts/AvenirNextLTPro-Bold.otf);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: #FFFFFF;
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+h2 {
+    font-family: AvenirNext-Bold;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.2vw;
+    line-height: 4vw;
+    color: #FFFFFF;
+}
+
+h4 {
+    font-family: AvenirNext-Bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 3.3vw;
+    color: #FFFFFF;
+}
+
+h5 {
+    font-family: 'Georama', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2vw;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+p {
+    font-family: 'Georama', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.btn {
+    background: linear-gradient(180deg, #F5BD00 0%, #FFDC1C 100%);
+    border: 6px solid #FFE638;
+    box-shadow: 0px 13px 33px -13px rgba(0, 0, 0, 0.15);
+    border-radius: 13px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    font-size: 1.2vw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #040303;
+    padding: 1.5vw 2vw;
+    transition: all 1s;
+}
+
+.btn:hover {
+    border: 4px solid rgb(210, 23, 23);
+    background: linear-gradient(180deg, #e1480c 0%, #FFDC1C 100%);
+}
+
+a.button:hover {
+    background: linear-gradient(180deg, #f500d4 0%, #FFDC1C 100%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.left,
+.right {
+    width: 50%;
+}
+
+/* -------------------------------------------Navbar Management------------------
+-------------------- */
+
+/* --------------------------header-----------
+--------------- */
+
+.header {
+    background: url("../images/header-bg.png")no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 65vw;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 10vw;
+}
+
+header .logo {
+    animation: bounceInDwon 1s;
+}
+
+header .logo img {
+    width: 12vw;
+}
+
+header ul {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1vw;
+}
+
+header ul li {
+    padding: .5vw 1.3vw;
+    border-radius: 13px;
+    background: #6F25A2;
+    transition: all .3s;
+}
+
+header ul li:hover {
+    background: #ffffff;
+}
+
+header ul li:hover a {
+    color: #040303;
+}
+
+header ul li:nth-child(1) {
+    animation: bounceInDown 1.3s;
+}
+
+header ul li:nth-child(2) {
+    animation: bounceInDown 1.6s;
+}
+
+header ul li:nth-child(3) {
+    animation: bounceInDown 1.9s;
+}
+
+header ul li:nth-child(4) {
+    animation: bounceInDown 2.1s;
+}
+
+header ul li a {
+    color: #FFF;
+    font-family: AvenirNext-Bold;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.header .btn-group .chart {
+    border-radius: 13px;
+    border-radius: 13px;
+    border: 1px solid #FFE638;
+    background: linear-gradient(180deg, rgba(245, 189, 0, 0.50) 0%, rgba(255, 220, 28, 0.50) 100%);
+    backdrop-filter: blur(27px);
+    text-shadow: 2px 2px 6px #fff;
+    padding: 1.9vw 3.5vw;
+    color: #040303;
+    font-family: 'Press Start 2P';
+    font-size: 1.1VW;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.header .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    position: absolute;
+    top: 46vw;
+    left: 40vw;
+}
+
+.header .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    position: fixed;
+    top: 20vw;
+    right: -.7vw;
+    padding: 1vw .8vw;
+}
+
+.header .social-links img {
+    width: 2vw;
+}
+
+/* --------------------------coin market-----------
+--------------- */
+
+.coin-market {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 15vw;
+}
+
+.coin-market img {
+    width: 12vw;
+}
+
+/* --------------------------about-----------
+--------------- */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 10vw;
+    background: url("../images/about-shadow.png")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about .left img {
+    width: 16vw;
+}
+
+.about .left h2 {
+    margin-bottom: 1vw;
+}
+
+.about .left p {
+    width: 75%;
+    margin-bottom: 3.4vw;
+}
+
+.about .right img {
+    width: 100%;
+}
+
+/* --------------------------tikenomics-----------
+--------------- */
+
+.tokenomics {
+    padding: 3vw 0vw 0 0;
+    text-align: center;
+}
+
+.tokenomics .token-heading {
+    width: 42vw;
+}
+
+.tokenomics img {
+    width: 100%;
+}
+
+.tokenomics h2 {
+    color: #FCD011;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.tokenomics h4 {
+    font-size: 16px;
+}
+
+.tokenomics p {
+    padding: 0 15vw;
+}
+
+/* -------------------------our-mission-----------
+--------------- */
+
+.our-mission {
+    padding: 3vw 10vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -18vw;
+    background: url("../images/our-mission-bg.png")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.our-mission img {
+    width: 33vw;
+}
+
+.our-mission p {
+    width: 75%;
+    margin-bottom: 2vw;
+}
+
+/* --------------------------htb-----------
+--------------- */
+
+.htb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 10vw;
+    background: url("../images/about-shadow.png")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.htb .left {
+    text-align: center;
+    position: relative;
+}
+
+.htb .left h3 {
+    font-size: 1.6vw;
+    font-weight: 900;
+    margin-top: -11vw;
+    font-family: AvenirNext-Bold;
+    color: #fff;
+}
+
+.htb .left img {
+    width: 80%;
+}
+
+.htb .left a {
+    padding: 1.2vw 2vw;
+    position: absolute;
+    top: 31.5vw;
+    left: 10.5vw;
+}
+
+.htb .right img {
+    width: 25vw;
+}
+
+.htb .right ol {
+    list-style-type: decimal;
+}
+
+/* --------------------------footer-----------
+--------------- */
+
+.join {
+    padding: 3vw 15vw;
+    text-align: center;
+    margin-top: 5vw;
+}
+
+.join img {
+    width: 90%;
+}
+
+.join h2 {
+    margin-top: -14vw;
+    margin-bottom: 1.5vw;
+}
+
+.join p {
+    padding: 0 6vw;
+}
+
+/* --------------------------footer-----------
+--------------- */
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #775AFC 0%, rgba(71, 16, 64, 0) 91.68%);
+    background: url("../images/footer-bg.jpg")no-repeat, linear-gradient(0deg, #775AFC 0%, rgba(71, 16, 64, 0) 91.68%);
+    background-size: cover;
+    background-position: center;
+    padding: 20vw 9vw 17vw 9vw;
+    margin-top: -8vw;
+}
+
+.footer .logo {
+    width: 40%;
+}
+
+.footer .logo .para1 {
+    color: #FFF;
+    font-size: 2vw;
+    font-family: AvenirNext-Bold;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 3vw;
+}
+
+.footer.logo p:nth-child(0) {
+    margin-bottom: 2vw;
+}
+
+.footer .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.footer .wrap a {
+    color: #FFF;
+    transition: all .3s;
+}
+
+.footer .wrap a:hover {
+    color: #FFFFFFa6;
+}
+
+.footer .menues,
+.footer .resources,
+.footer .social {
+    width: 30%;
+}
+
+.footer .logo img {
+    width: 60%;
+    margin-bottom: 1.5vw;
+}
+
+.footer h5 {
+    font-size: 1.7vw;
+    font-weight: 700;
+    margin-bottom: 2vw;
+}
+
+.footer ul li {
+    margin-bottom: 1.3vw;
+}
+
+.footer .socials .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.2vw 1vw;
+    padding: 1vw;
+    border-radius: 13px;
+}
+
+.footer .socials .social-links img {
+    width: 3vw;
+    padding: .5vw;
+    transition: all 0.5s;
+}
+
+.footer .socials .social-links img:hover {
+    transform: translateY(-0.5vw);
+    background: #af0f9a;
+    border-radius: 0.5vw;
+}
+
+/* --------------------------------website Responsive--------------
+-------------------- */
+
+/* ----------------------------@ 1280px--------
+------- */
+
+@media (max-width: 1280px) {
+    /* -------------------------navbar 1280px--------------------------
+    ----------------------- */
+}
+
+/* ----------------------------@ 980px--------
+------- */
+
+@media (max-width: 980px) {
+    .header {
+        background: url("../images/header-bg.png")no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        height: 65vw;
+        position: relative;
+    }
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10vw;
+    }
+    header .logo img {
+        width: 14vw;
+    }
+    header ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1vw;
+    }
+    header ul li {
+        padding: .5vw 1.3vw;
+        border-radius: 13px;
+        background: #6F25A2;
+    }
+    header ul li a {
+        color: #FFF;
+        font-family: AvenirNext-Bold;
+        font-size: 1.3vw;
+        font-style: normal;
+        font-weight: 600;
+    }
+    .header .btn-group .chart {
+        border-radius: 13px;
+        border: 1px solid #FFE638;
+        background: linear-gradient(180deg, rgba(245, 189, 0, 0.50) 0%, rgba(255, 220, 28, 0.50) 100%);
+        backdrop-filter: blur(27px);
+        padding: 2.2vw 3.5vw;
+        color: #040303;
+        font-family: 'Press Start 2P';
+        font-size: 1.1VW;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    .header .btn-group {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        position: absolute;
+        top: 46vw;
+        left: 40vw;
+    }
+    .header .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        position: fixed;
+        top: 20vw;
+        right: -.7vw;
+        padding: 1vw .8vw;
+    }
+    .header .social-links img {
+        width: 2vw;
+    }
+    /* --------------------------coin market-----------
+    --------------- */
+    .coin-market {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vw 15vw;
+    }
+    .coin-market img {
+        width: 12vw;
+    }
+    /* --------------------------about-----------
+    --------------- */
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 10vw;
+        background: url("../images/about-shadow.png")no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .about .left img {
+        width: 16vw;
+    }
+    .about .left h2 {
+        margin-bottom: 1vw;
+    }
+    .about .left p {
+        width: 75%;
+        margin-bottom: 3.4vw;
+    }
+    .about .right img {
+        width: 100%;
+    }
+    /* --------------------------tikenomics-----------
+    --------------- */
+    .tokenomics {
+        padding: 3vw 0vw 0 0;
+        text-align: center;
+    }
+    .tokenomics .token-heading {
+        width: 40vw;
+    }
+    .tokenomics img {
+        width: 100%;
+    }
+    /* -------------------------our-mission-----------
+    --------------- */
+    .our-mission {
+        padding: 3vw 10vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -18vw;
+        background: url("../images/our-mission-bg.png")no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .our-mission img {
+        width: 33vw;
+    }
+    .our-mission p {
+        width: 75%;
+        margin-bottom: 2vw;
+    }
+    /* --------------------------htb-----------
+    --------------- */
+    .htb {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3vw 10vw;
+        background: url("../images/about-shadow.png")no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .htb .left {
+        text-align: center;
+        position: relative;
+    }
+    .htb .left img {
+        width: 80%;
+    }
+    .htb .left a {
+        padding: 1vw 2vw;
+        position: absolute;
+        top: 31vw;
+        left: 10.5vw;
+    }
+    .htb .right img {
+        width: 25vw;
+    }
+    .htb .right ol {
+        list-style-type: decimal;
+    }
+    /* --------------------------footer-----------
+    --------------- */
+    .join {
+        padding: 3vw 15vw;
+        text-align: center;
+    }
+    .join img {
+        width: 90%;
+    }
+    .join h2 {
+        margin-top: -14vw;
+        margin-bottom: 1.5vw;
+    }
+    .join p {
+        padding: 0 6vw;
+    }
+}
+
+/* --------------------------------whitepaper--------------
+-------------------- */
+
+/* ----------------------------@ 600px--------
+------- */
+
+@media (max-width: 600px) {
+    .web {
+        display: none;
+    }
+    .mob {
+        display: flex;
+    }
+    .btn {
+        background: linear-gradient(180deg, #F5BD00 0%, #FFDC1C 100%);
+        border: 4px solid #FFE638;
+        box-shadow: 0px 13px 33px -13px rgba(0, 0, 0, 0.15);
+        border-radius: 7px;
+        font-family: 'Press Start 2P', cursive;
+        font-weight: 400;
+        font-size: 1.7vw;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #040303;
+        padding: 2.2vw 3.5vw;
+        transition: all 1s;
+    }
+    .btn:hover {
+        border: 2px solid rgb(210, 23, 23);
+        background: linear-gradient(180deg, #e1480c 0%, #FFDC1C 100%);
+    }
+    h2 {
+        font-family: AvenirNext-Bold;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 10vw;
+        line-height: 10vw;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    h4 {
+        font-family: AvenirNext-Bold;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5vw;
+        line-height: 6vw;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    h5 {
+        font-family: 'Avenir Next';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3vw;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.5vw;
+        line-height: 5vw;
+        font-family: avenirNext-regular;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .button {
+        background: linear-gradient(180deg, #F5BD00 0%, #FFDC1C 100%);
+        border: 6px solid #FFE638;
+        box-shadow: 0px 13px 33px -13px rgba(0, 0, 0, 0.15);
+        border-radius: 13px;
+        font-family: 'Press Start 2P';
+        font-weight: 400;
+        font-size: 2.5vw;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #040303;
+        padding: 1.5vw 3vw;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .left,
+    .right {
+        width: 50%;
+    }
+    .toggler-icon {
+        position: absolute;
+        top: 5vw;
+        right: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        cursor: pointer;
+    }
+    .toggler-icon span {
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+    }
+    .header {
+        background: url("../images/header-bg.png")no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        height: 65vw;
+        position: relative;
+    }
+    header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4vw 10vw;
+        z-index: 1000;
+    }
+    header .logo {
+        width: 100%;
+    }
+    header .logo img {
+        width: 16vw;
+    }
+    header ul {
+        display: flex;
+        width: 100%;
+        height: 60vh;
+        margin-top: -100vh;
+        background: #F5BD00;
+        border-radius: 5vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        transition: all .4s ease-out;
+        z-index: 1000;
+    }
+    header ul.active {
+        margin-top: 0;
+    }
+    header ul li {
+        padding: 2vw 3vw;
+        background: rebeccapurple;
+        transition: all .3s;
+    }
+    header ul li:hover {
+        background: #ffffff;
+    }
+    header ul li:hover a {
+        color: #040303;
+    }
+    header ul li a {
+        width: 100%;
+        color: #ffffff;
+        font-family: AvenirNext-Bold;
+        font-size: 4vw;
+        font-style: normal;
+        font-weight: 600;
+    }
+    .header .btn-group .chart {
+        border-radius: 6px;
+        border: 1px solid #FFE638;
+        background: linear-gradient(180deg, rgba(245, 189, 0, 0.50) 0%, rgba(255, 220, 28, 0.50) 100%);
+        backdrop-filter: blur(27px);
+        padding: 2.9vw 4.2vw;
+        color: #040303;
+        font-family: 'Press Start 2P';
+        font-size: 1.9VW;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    .header .btn-group {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        position: absolute;
+        top: 68vw;
+        left: 12vw;
+        z-index: 2;
+    }
+    .header .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4vw;
+        position: fixed;
+        top: 20vw;
+        right: -.7vw;
+        padding: 3vw 1vw;
+    }
+    .header .social-links img {
+        padding: 1vw;
+        width: 6vw;
+        border-radius: 2vw;
+    }
+    .header .social-links img:hover {
+        background: #f54500;
+    }
+    /* --------------------------coin market-----------
+    --------------- */
+    .coin-market {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4vw;
+        justify-content: space-evenly;
+        padding: 10vw 10vw;
+        padding-top: 20vw;
+    }
+    .coin-market img {
+        width: 30vw;
+    }
+    /* --------------------------about-----------
+    --------------- */
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10vw 10vw;
+        gap: 15vw;
+        background: url("../images/about-shadow.png")no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .about .left {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .left img {
+        width: 40%;
+    }
+    .about .left h2 {
+        font-size: 4vw;
+        line-height: 6vw;
+        margin-bottom: 1vw;
+    }
+    .about .left p {
+        width: 100%;
+        margin-bottom: 3.2vw;
+    }
+    .about .right {
+        width: 100%;
+    }
+    .about .right img {
+        width: 100%;
+    }
+    /* --------------------------tikenomics-----------
+    --------------- */
+    .tokenomics {
+        padding: 3vw 0vw 0 0;
+        text-align: center;
+    }
+    .tokenomics .token-heading {
+        width: 70%;
+    }
+    .tokenomics img {
+        width: 100%;
+        /* transform: scale(1.05); */
+    }
+    .tokenomics h2 {
+        color: #FCD011;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .tokenomics h4 {
+        font-size: 12px;
+    }
+    /* -------------------------our-mission-----------
+    --------------- */
+    .our-mission {
+        padding: 10vw 10vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -40vw;
+        background: url("../images/our-mission-bg.png")no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .our-mission img {
+        width: 70%;
+        position: relative;
+        top: 20vw;
+    }
+    .our-mission p {
+        position: relative;
+        top: 20vw;
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+    /* --------------------------htb-----------
+    --------------- */
+    .htb {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10vw 7vw;
+        gap: 40vw;
+        background: url("../images/about-shadow.png")no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .htb .left {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .htb .left img {
+        width: 100%;
+    }
+    .htb .left a {
+        padding: 2.2vw 3.5vw;
+        position: relative;
+        left: 0;
+        font-size: 1.7vw;
+        margin-top: -27vw;
+    }
+    .htb .left h3 {
+        font-size: 4vw;
+        margin-top: -26vw;
+    }
+    .htb .right {
+        padding-top: 15vw;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+    }
+    .htb .right img {
+        width: 55vw;
+    }
+    .htb .right ol {
+        list-style-type: decimal;
+    }
+    .htb .right ol li {
+        font-size: 3vw;
+        line-height: 7vw;
+        text-align: center;
+    }
+    /* --------------------------footer-----------
+    --------------- */
+    .join {
+        padding: 3vw 5vw;
+        text-align: center;
+    }
+    .join img {
+        width: 90%;
+        height: 60vw;
+    }
+    .join h2 {
+        font-size: 5vw;
+        margin-top: -39vw;
+        margin-bottom: 1.5vw;
+    }
+    .join p {
+        font-size: 2.8vw;
+        line-height: 3.7vw;
+        padding: 0 8vw;
+    }
+    .join {
+        display: none;
+    }
+    .special {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .special img {
+        width: 80%;
+    }
+    /* --------------------------footer-----------
+--------------- */
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background: url("../images/FOOTER.png")no-repeat;
+        background-size: cover;
+        background-position: center;
+        background: none;
+        padding: 20vw 10vw 5vw 10vw;
+        gap: 5vw;
+    }
+    .footer .copy {
+        font-size: 2.5vw;
+        padding: 0 15vw;
+    }
+    .footer .logo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+        order: 2;
+        padding-bottom: 2vw;
+    }
+    .footer .logo .para1 {
+        margin-bottom: 2vw;
+    }
+    .footer.logo p:nth-child(0) {
+        margin-bottom: 2vw;
+    }
+    .footer .wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7vw;
+        width: 100%;
+        order: 1;
+    }
+    .footer .wrap .menues {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .wrap .resources {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .wrap .social {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .logo img {
+        width: 50%;
+    }
+    .footer h5 {
+        font-size: 6vw;
+        line-height: 10vw;
+        font-weight: 700;
+        margin-bottom: 2vw;
+    }
+    .footer ul li {
+        font-size: 2.5vw;
+        line-height: 4.5vw;
+        margin-bottom: 1.3vw;
+        text-align: center;
+        list-style: none;
+    }
+    .footer ul li:hover {
+        text-decoration: underline;
+    }
+    .footer .socials .social-links {
+        display: flex;
+        align-items: center;
+        gap: 4vw;
+        padding: 1vw;
+        border-radius: 2vw;
+    }
+    .footer .socials .social-links img {
+        width: 7vw;
+        padding: 1vw;
+        border-radius: 2vw;
+    }
+}
